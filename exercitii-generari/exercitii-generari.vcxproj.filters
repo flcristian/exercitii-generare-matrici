@@ -26,5 +26,8 @@
     <ClInclude Include="probleme.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="aplicari.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
