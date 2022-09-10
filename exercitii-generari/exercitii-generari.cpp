@@ -1,5 +1,5 @@
 #include "aplicari.h"
 
 int main() {
-	aplicareInt(1,1,5,5);
+	aplicareChar(0,0,5,5);
 }

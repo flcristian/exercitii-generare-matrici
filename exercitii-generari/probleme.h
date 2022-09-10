@@ -481,3 +481,176 @@ void varianta24(int x[100][100], int i, int j) {
 		}
 	}
 }
+
+// Completam :
+//
+// for(i = 1; i <= 5; i++)
+//    for(j = 1; j <= 5; j++)
+// 
+// 2 1 1 1 1
+// 1 2 1 1 1
+// 1 1 2 1 1
+// 1 1 1 2 1
+// 1 1 1 1 2
+
+void variantaStiinte3(int x[100][100], int i, int j) {
+	for (i = 1; i <= 5; i++) {
+		for (j = 1; j <= 5; j++) {
+			if (i == j) {
+				x[i][j] = 2;
+			}
+			else {
+				x[i][j] = 1;
+			}
+		}
+	}
+}
+
+// Completam :
+//
+// for(i = 1; i <= 6; i++)
+//    for(j = 1; j <= 6; j++)
+//
+// 1 1 1 1 1 1
+// 1 2 2 2 2 1
+// 1 2 3 3 2 1
+// 1 2 3 3 2 1
+// 1 2 2 2 2 1
+// 1 1 1 1 1 1
+
+void variantaStiinte5(int x[100][100], int i, int j) {
+	for (i = 1; i <= 6; i++) {
+		for (j = 1; j <= 6; j++) {
+			if (i == 1 || i == 6 || j == 1 || j == 6) {
+				x[i][j] = 1;
+			}
+			else {
+				if (i == 2 || i == 5 || j == 2 || j == 5) {
+					x[i][j] = 2;
+				}
+				else {
+					x[i][j] = 3;
+				}
+			}
+		}
+	}
+}
+
+// Completam :
+//
+// for(i = 1;i <= 6; i++)
+//    for(j = 1; j <= 6; j++)
+//	
+// 2 3 1 2 3 1
+// 3 6 2 3 6 2
+// 1 2 0 1 2 0
+// 2 3 1 2 3 1
+// 3 6 2 3 6 2
+// 1 2 0 1 2 0 
+
+void variantaStiinte6(int x[100][100], int i, int j) {
+	for (i = 1; i <= 6; i++) {
+		for (j = 1; j <= 6; j++) {
+			if (i % 3 == 1) {
+				x[i][j] = (i % 3) + (j % 3);
+			}
+			else {
+				if (i % 3 == 2) {
+					x[i][j] = x[1][j] * 2 - (j % 3 % 2);
+				}
+				else {
+					x[i][j] = x[1][j] - 1;
+				}
+			}
+		}
+	}
+}
+
+// SE REPETA ^ ^ ^
+
+// Completam :
+//
+// for(i = 0; i < 6; i++)
+//    for(j = 0; j < 6; j++)
+// 
+// A B C D E F
+// B A B B F B
+// C C A F C C
+// D D F A D D
+// E F E E A E
+// F F F F F A
+
+void variantaStiinte7(char x[100][100], int i, int j) {
+	for (i = 0; i < 6; i++) {
+		for (j = 0; j < 6; j++) {
+			if (i == 0 || j == 0) {
+				x[i][j] = 'A' + (i + j) % 6;
+			}
+			else {
+				if (i == j || j == 5 - i) {
+					x[i][j] = 'F' - (((i + j) / i) % 2 + 1) % 2 * 5;
+				} // O VALOARE MAI TREBUIE
+				else {
+					x[i][j] = 'A' + i;
+				}
+			}
+			/*else {
+				if (j == i) {
+					x[i][j] = 'A';
+				}
+				else {
+					if (j == 5 - i) {
+						x[i][j] = 'F';
+					}
+					else {
+						x[i][j] = 'A' + i;
+					}
+				}
+			}*/
+			//=>de regandit mai optim
+		}
+	}
+}
+
+// Compeltam :
+//
+// for(i = 0; i < 5 ; i++)
+//    for(j = 0; j < 5; j++)
+// 
+// 6 7 8 9 10
+// 7 8 9 10 11
+// 8 9 10 11 12
+// 9 10 11 12 13
+// 10 11 12 13 14
+
+void variantaStiinte8(int x[100][100], int i, int j) {
+	for (i = 0; i < 5; i++) {
+		for (j = 0; j < 5; j++) {
+			x[i][j] = 6 + i + j;
+		}
+	}
+}
+
+// Compeltam :
+//
+// for(i = 0; i < 5 ; i++)
+//    for(j = 0; j < 5; j++)
+// 
+// 0 1 2 3 4
+// 2 3 4 5 6
+// 0 1 2 3 4
+// 6 7 8 9 10
+// 0 1 2 3 4
+
+void variantaStiinte9(int x[100][100], int i, int j) {
+	for (i = 0; i < 5; i++) {
+		for (j = 0; j < 5; j++) {
+			if (i % 2 == 0) {
+				x[i][j] = j;
+			}
+			else {
+				x[i][j] = i * 2 + j;
+			}
+		}
+	}
+}
