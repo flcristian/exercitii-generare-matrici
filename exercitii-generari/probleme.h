@@ -1,5 +1,7 @@
 #include "functii.h"
 
+// VARIANTELE MATE-INFO:
+
 // Completam :
 // 
 // for(i = 1; i <= 5; i++)
@@ -256,20 +258,15 @@ void varianta12(int x[100][100], int i, int j) {
 void varianta13(int x[100][100], int i, int j) {
 	for (i = 5; i >= 1; i--) {
 		for (j = 1; j < 6; j++) {
-			if (j == 1 || i == 5) {
+			if (i == 5 || j == 1) {
 				x[i][j] = 5;
 			}
 			else {
-				if ((i == 3 && j == 4) || (i == 2 && (j == 3 || j == 4))) {
-					x[i][j] = 0;
+				if ((i + j) % 2 == 0) {
+					x[i][j] = (x[i][j - 1] + x[i + 1][j]) % 4;
 				}
 				else {
-					if (j == 6 - i || j == i) {
-						x[i][j] = 2;
-					}
-					else {
-						x[i][j] = 1;
-					}
+					x[i][j] = (x[i][j - 1] + x[i + 1][j]) % 4 % 2; 
 				}
 			}
 		}

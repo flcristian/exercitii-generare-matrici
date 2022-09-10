@@ -1,2 +1,5 @@
 ﻿  exercitii-generari.cpp
-  exercitii-generari.vcxproj -> D:\mycode\tablouribidimensionale\exercitii-generari\x64\Debug\exercitii-generari.exe
+D:\mycode\tablouribidimensionale\exercitii-generari\exercitii-generari\functii.h(8,6): error C2084: function 'void afisareMatriceInt(int [][100],int,int,int,int)' already has a body
+D:\mycode\tablouribidimensionale\exercitii-generari\exercitii-generari\functii.h(8): message : see previous definition of 'afisareMatriceInt'
+D:\mycode\tablouribidimensionale\exercitii-generari\exercitii-generari\functii.h(19,6): error C2084: function 'void afisareMatriceChar(char [][100],int,int,int,int)' already has a body
+D:\mycode\tablouribidimensionale\exercitii-generari\exercitii-generari\functii.h(19): message : see previous definition of 'afisareMatriceChar'

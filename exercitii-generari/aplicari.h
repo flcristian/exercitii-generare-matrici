@@ -6,7 +6,7 @@
 
 void aplicareInt(int i, int j, int m, int n) {
 	int x[100][100];
-	varianta24(x, i, j);
+	varianta13(x, i, j);
 	afisareMatriceInt(x, m, n, i, j);
 }
 
